@@ -1,5 +1,5 @@
 module Guard
-  module Parallelall
+  module ParallelAll
     VERSION = "0.0.1"
   end
 end
