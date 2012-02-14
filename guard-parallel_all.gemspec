@@ -4,12 +4,12 @@ require "guard-parallel_all/version"
 
 Gem::Specification.new do |s|
   s.name        = "guard-parallel_all"
-  s.version     = Guard::Parallelall::VERSION
+  s.version     = Guard::ParallelAll::VERSION
   s.authors     = ["sakai shunsuke"]
   s.email       = ["sakai@ans-web.co.jp"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.homepage    = "https://github.com/answer/guard-parallel_all"
+  s.summary     = %q{parallel:[spec|features] する guard}
+  s.description = %q{run_all ファイルを監視して、 parallel タスクを起動する}
 
   s.rubyforge_project = "guard-parallel_all"
 
@@ -18,7 +18,5 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
+  s.add_dependency "guard"
 end
