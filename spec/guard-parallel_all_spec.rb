@@ -7,15 +7,3 @@ module Guard::ParallelAll
     end
   end
 end
-module Guard
-  describe :ParallelAllSpec do
-    it "は、存在する" do
-      ParallelAllSpec.should be_true
-    end
-  end
-  describe :ParallelAllFeatures do
-    it "は、存在する" do
-      ParallelAllFeatures.should be_true
-    end
-  end
-end
