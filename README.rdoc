@@ -1,0 +1,32 @@
+= Guard::ParallelAll
+
+run_all ファイルを監視して rake parallel:[spec|features] する guard
+
+* 普段は guard+spork でテストしている
+* 全テストを parallel:spec, parallel:features で行なっている
+* parallel でテストするときに guard を止めるのが面倒だ
+
+== Install
+
+ # Gemfile
+ group :development do
+   gem 'guard-parallel_all'
+ end
+
+== Usage
+
+guard の readme[https://github.com/guard/guard#readme] を参照
+
+== Guardfile
+
+ guard "parallel-all-spec" do
+   watch("tmp/parallel_all_spec")
+ end
+ guard "parallel-all-features" do
+   watch("tmp/parallel_all_features")
+ end
+
+tmp/parallel_all_spec, tmp/parallel_all_features を touch すると parallel で全テストが走る
+
+オプションは特にない
+
